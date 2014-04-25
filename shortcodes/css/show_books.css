@@ -1,0 +1,5 @@
+/* Put CSS for this shortcode here */
+body .book-list .book a
+{
+	color: red;
+}
