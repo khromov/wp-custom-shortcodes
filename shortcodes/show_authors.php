@@ -11,7 +11,7 @@ add_shortcode('show_authors', function($atts)
 
 	/** Assemble our query **/
 	$args = array(
-		'post_type' => 'book-author',
+		'post_type' => 'author',
 		'posts_per_page' => '-1',
 		'order' => ($order === 'ASC') ? 'ASC' : 'DESC',
 		'orderby' => 'title'
