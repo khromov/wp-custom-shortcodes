@@ -63,7 +63,7 @@ add_action('admin_enqueue_scripts', function()
 add_action('init', function()
 {
 	global $pagenow;
-	if(function_exists('vc_map') && is_admin() && $pagenow === 'post.php' || $pagenow === 'admin-ajax.php' || $pagenow === 'post-new.php') //Only load in admin mode on posts page. Will probably screw up frontend editor.
+	if(function_exists('vc_map')) // TODO: We don't need all these rules, but maybe some of them? - && is_admin() && $pagenow === 'post.php' || $pagenow === 'admin-ajax.php' || $pagenow === 'post-new.php'//Only load in admin mode on posts page. Will probably screw up frontend editor.
 	{
 		foreach (glob(__DIR__ . "/mappings/*.php") as $filename)
 			include $filename;
